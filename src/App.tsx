@@ -3,7 +3,6 @@ import reactLogo from "./assets/react.svg";
 import viteLogo from "/vite.svg";
 import User from "./user";
 import style from "./App.module.css";
-console.log(style);
 function App() {
   return (
     <>

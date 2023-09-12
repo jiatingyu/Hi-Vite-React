@@ -7,6 +7,7 @@ import {
   useLoaderData,
 } from "react-router-dom";
 import { loadOrder } from "../order";
+import App from "../App";
 const Error = () => {
   const error = useRouteError();
   console.error(error);
@@ -17,7 +18,7 @@ const Layout = () => {
   console.log(res.then((e: any) => console.log(e)));
   return (
     <div>
-      <h1>默认布局</h1>
+      <h1>默认布局--vercel</h1>
       {/* <a href="/">首页</a>| <a href="hello">hello页</a> |{" "}
       <a href="order">订单页</a> */}
       <Link to="/">首页</Link>| <Link to="hello">hello页</Link> |{" "}
@@ -41,6 +42,10 @@ let hashRoute = createBrowserRouter([
     errorElement: <Error />,
     loader: loadOrder,
     children: [
+      {
+        path: "/",
+        element: <App />,
+      },
       {
         path: "order",
         element: <Order />,

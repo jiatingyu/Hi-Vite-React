@@ -39,7 +39,7 @@ export default defineConfig((props) => {
     // 服务器相关
     server: {
       host: "0.0.0.0",
-      port: 5173,
+      port: 5174,
       proxy: {},
     },
     //构建相关
